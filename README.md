@@ -1,2 +1,2 @@
-# odin_restaurant
+# odin restaurant
 restaurant page
