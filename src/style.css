@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700;800;900&family=Liu+Jian+Mao+Cao&family=Raleway:wght@600;700;800;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
 html, body{
-    height: 100vh;
     width: 100%;
-    overflow: hidden;
     font-family: 'Catamaran', sans-serif;
+    text-align: center;
+}
+
+.homePageclass{
+        overflow: hidden;
 }
 
 @keyframes leftdown {
@@ -70,6 +75,17 @@ html, body{
         opacity: 1;}
 }
 
+@keyframes downonly5 {
+    from {transform: translateY(-5%)}
+    to{transform: translateY(0);
+        opacity: 1;}
+}
+
+@keyframes fade{
+    from {}
+    to{opacity: 1;}
+}
+
 img{
     z-index: 1;
 }
@@ -105,7 +121,7 @@ img{
     animation: leftup 1s forwards ease;
 }
 
-#p4{
+.p4{
     position: absolute;
     height: 20vw;
     right: 0;
@@ -113,6 +129,17 @@ img{
     opacity: 0;
     animation: leftdown5 1s forwards ease;
 }
+
+.p4Menu{
+    position: absolute;
+    height: 20vw;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    animation: fade 1s forwards ease;
+}
+
+
 
 #p5{
     position: absolute;
@@ -197,12 +224,54 @@ img{
     z-index: 2;
 }
 
-#title>h1{
+#name{
     padding: 50px 0;
     font-weight: 1100;
     opacity: 0;
     animation: downonly 0.5s forwards ease 0.5s;
-    font-family: 'Amaranth', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+#shiro{
+    font-family: 'Liu Jian Mao Cao', 'cursive';
+    font-size: 12vw;
+    position: absolute;
+    height: 45vh;
+    top: 5vh;
+    width: 15vw;
+    left: 47%;
+    color:rgba(0, 0, 0, 0.082);
+    opacity: 0;
+    animation: downonly5 3s forwards ease 1s;
+}
+
+#shiro2{
+    font-family: 'Liu Jian Mao Cao', 'cursive';
+    font-size: 120px;
+    position: absolute;
+    top: 40px;
+    width: 5vw;
+    left: 5vw;
+    color:rgba(0, 0, 0, 0.082);
+    opacity: 0;
+    animation: downonly5 0.5s forwards ease 1.5s;
+}
+
+#homeButton{
+    position: absolute;
+    left: 3vw;
+    font-weight: 800;
+}
+
+#menuButton{
+    position: absolute;
+    left: 45vw;
+}
+
+#contactButton{
+    position: absolute;
+    left: 55vw;
+    width: 250px;
 }
 
 #title>p{
@@ -210,7 +279,7 @@ img{
     font-weight: 100;
     opacity: 0;
     animation: downonly 0.5s forwards ease 1s;
-    color: grey;
+    color: rgb(82, 82, 82);
 }
 
 #buttonDiv{
@@ -226,7 +295,7 @@ img{
     border-radius: 30px;
     margin: 40px;
     border: 2px solid transparent;
-    background-color: rgb(112, 214, 214);
+    background-color: rgb(112, 214, 214, 0.63);
     opacity: 0;
     animation: downonly 0.5s forwards ease 1.5s;
     cursor: pointer;
@@ -234,6 +303,103 @@ img{
 }
 
 #buttonDiv>button:hover{
-    background-color: rgba(112, 214, 214, 0.63);
+    background-color: rgba(112, 214, 214);
     border: 2px solid teal;
+}
+
+nav{
+    position: relative;
+    display: block;
+    margin-top: 50px;
+    height: 70px;
+    width: 65vw;
+    background-color: rgba(112, 214, 214, 0.747);
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    opacity: 0;
+    animation: 1s navStart ease forwards;
+}
+
+@keyframes navStart{
+    from{ opacity: 0;
+        width: 25vw;}
+    to{ width: 65vw;
+        opacity: 1;}
+}
+
+nav>button{
+    font-size: 35px;
+    font-weight: 600;
+    padding: 0 20px;
+    margin: 10px auto;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0;
+    animation: fade 0.5s ease forwards 1s;
+}
+
+#menu{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 65vw;
+    justify-content: space-evenly;
+    background-color: rgba(128, 128, 128, 0.664);
+    margin: 30px auto;
+    border-radius: 30px;
+    min-width: 600px;
+    z-index: 2;
+    opacity: 0;
+    animation: fade 0.5s ease forwards;
+}
+
+.menuImg{
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    left: 75px;
+    top: 20px;
+    opacity: 0;
+    animation: fade 0.5s ease 0.5s forwards;
+}
+
+.menuImgBg{
+    display: block;
+    position: absolute;
+    height: 350px;
+    width: 350px; 
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: fade 0.5s ease 0.25s forwards;
+}
+
+.itemName{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.itemText{
+    padding: 10px;
+    opacity: 0;
+    animation: fade 0.5s ease 0.5s forwards;
+}
+
+.itemDesc{
+    font-weight: 100;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.menuitem{
+    position: relative;
+    display: grid;
+    grid-template-columns: 350px 300px;
+    grid-template-rows: 350px;
+    margin: 20px 0px;
 }
