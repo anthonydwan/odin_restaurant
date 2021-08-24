@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Catamaran', sans-serif;
+}
+
+@keyframes leftdown {
+    from {transform: translateX(10%) translateY(-10%)}
+    to{transform: translateX(0) translateY(0);
+        opacity: 1;}
+}
+
+@keyframes leftdown15 {
+    from {transform: translateX(15%) translateY(-15%)}
+    to{transform: translateX(0) translateY(0);
+        opacity: 1;}
+}
+
+@keyframes leftdown5 {
+    from {transform: translateX(5%) translateY(-5%)}
+    to{transform: translateX(0) translateY(0);
+        opacity: 1;}
+}
+
+@keyframes leftup {
+    from {transform: translateX(10%) translateY(10%)}
+    to{transform: translateX(0) translateY(0);
+        opacity: 1;}
+}
+
+@keyframes leftup5 {
+    from {transform: translateX(5%) translateY(5%)}
+    to{transform: translateX(0) translateY(0);
+        opacity: 1;}
+}
+
+@keyframes rightdown {
+    from {transform: translateX(-10%) translateY(-10%)}
+    to{transform: translateX(0) translateY(0);
+        opacity: 1;}
+}
+
+@keyframes rightonly{
+    from {transform: translateX(-10%)}
+    to{transform: translateX(0);
+        opacity: 1;}
+}
+
+@keyframes rightup {
+    from {transform: translateX(-10%) translateY(10%)}
+    to{transform: translateX(0) translateY(0);
+        opacity: 1;}
+}
+
+@keyframes rightup5 {
+    from {transform: translateX(-5%) translateY(2%)}
+    to{transform: translateX(0) translateY(0);
+        opacity: 1;}
+}
+
+@keyframes downonly {
+    from {transform: translateY(-10%)}
+    to{transform: translateY(0);
+        opacity: 1;}
+}
+
+img{
+    z-index: 1;
+}
+
+
+#p1{
+    position: absolute;
+    width: 5vw;
+    left: 70vw;
+    top: 20vh;
+    opacity: 0;
+    animation: leftdown15 1s forwards ease;
+}
+
+
+#p2{
+    position: absolute;
+    width: 10vw;
+    left: 60vw;
+    top: 0;
+    opacity: 0;
+    overflow: hidden;
+    animation: leftdown 1s forwards ease;
+}
+
+
+#p3{
+    position: absolute;
+    width: 12vw;
+    right: 20vw;
+    top: 50vh;
+    opacity: 0;
+    animation: leftup 1s forwards ease;
+}
+
+#p4{
+    position: absolute;
+    height: 20vw;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    animation: leftdown5 1s forwards ease;
+}
+
+#p5{
+    position: absolute;
+    width: 19.5vw;
+    right: 0;
+    bottom: 0vh;
+    opacity: 0;
+    animation: leftup5 1s forwards ease;
+}
+
+
+#p6{
+    position: absolute;
+    width: 27.5vw;
+    right: 15vw;
+    bottom: 0;
+    opacity: 0;
+    animation: leftup 1s forwards ease;
+}
+
+#p7{
+    position: absolute;
+    width: 15vw;
+    left: 25vw;
+    top: 30vh;
+    opacity: 0;
+    animation: rightonly 1s forwards ease;
+}
+
+#p8{
+    position: absolute;
+    width: 15vw;
+    top: 0;
+    left: 25vw;
+    opacity: 0;
+    animation: rightdown 1s forwards ease;
+}
+
+#p9{
+    position: absolute;
+    width: 10vw;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    animation: rightdown 1s forwards ease;
+}
+
+#p10{
+    position: absolute;
+    width: 18vw;
+    left: 0;
+    top: 20vh;
+    opacity: 0;
+    animation: rightonly 1s forwards ease;
+}
+
+#p11{
+    position: absolute;
+    width: 20vw;
+    left: 10vw;
+    top: 0;
+    opacity: 0;
+    animation: rightdown 1s forwards ease;
+}
+
+#p12{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 35vw;
+    opacity: 0;
+    animation: rightup5 1s forwards ease;
+}
+
+#title{
+    position: relative;
+    height: 100px;
+    width: 550px;
+    margin: 30vh auto;
+    font-size: 35px;
+    text-align: center;
+    z-index: 2;
+}
+
+#title>h1{
+    padding: 50px 0;
+    font-weight: 1100;
+    opacity: 0;
+    animation: downonly 0.5s forwards ease 0.5s;
+    font-family: 'Amaranth', sans-serif;
+}
+
+#title>p{
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0;
+    animation: downonly 0.5s forwards ease 1s;
+    color: grey;
+}
+
+#buttonDiv{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#buttonDiv>button{
+    font-size: 20px;
+    height: 50px;
+    width: 160px;
+    border-radius: 30px;
+    margin: 40px;
+    border: 2px solid transparent;
+    background-color: rgb(112, 214, 214);
+    opacity: 0;
+    animation: downonly 0.5s forwards ease 1.5s;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#buttonDiv>button:hover{
+    background-color: rgba(112, 214, 214, 0.63);
+    border: 2px solid teal;
+}
