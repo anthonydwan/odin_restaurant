@@ -133,6 +133,7 @@ img{
 .p4Menu{
     position: absolute;
     height: 20vw;
+    min-height: 400px;
     right: 0;
     top: 0;
     opacity: 0;
@@ -258,20 +259,20 @@ img{
 }
 
 #homeButton{
-    position: absolute;
-    left: 3vw;
     font-weight: 800;
+    position: relative;
+    right: 0;
 }
 
 #menuButton{
-    position: absolute;
-    left: 45vw;
+    position: relative;
+    right: 0;
 }
 
 #contactButton{
-    position: absolute;
-    left: 55vw;
+    position: relative;
     width: 250px;
+    right: 0;
 }
 
 #title>p{
@@ -308,16 +309,19 @@ img{
 }
 
 nav{
-    position: relative;
-    display: block;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 40% 30% 30%;
     margin-top: 50px;
     height: 70px;
     width: 65vw;
+    min-width: 800px;
     background-color: rgba(112, 214, 214, 0.747);
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
     opacity: 0;
     animation: 1s navStart ease forwards;
+    z-index: 2;
 }
 
 @keyframes navStart{
@@ -327,11 +331,11 @@ nav{
         opacity: 1;}
 }
 
-nav>button{
+nav>div>button{
     font-size: 35px;
     font-weight: 600;
     padding: 0 20px;
-    margin: 10px auto;
+    margin-top: 10px;
     height: 50px;
     width: 200px;
     border-radius: 25px;
@@ -342,8 +346,20 @@ nav>button{
     animation: fade 0.5s ease forwards 1s;
 }
 
+nav>div{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: left;
+}
+
+#div2, #div3{
+    justify-content: flex-end;
+}
+
 #menu{
     position: relative;
+    top: 180px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;

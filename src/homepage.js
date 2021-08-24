@@ -1,4 +1,4 @@
-const homePage = ((p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12)=>{
+const homePage = (()=>{
     const body = document.querySelector("body")
     body.classList.add("homePageclass")
     const content = document.querySelector("#content")
@@ -28,18 +28,18 @@ const homePage = ((p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12)=>{
         imgs[i].id = `p${i+1}`
     }
 
-    img1.src = p1
-    img2.src = p2
-    img3.src = p3
-    img4.src = p4
-    img5.src = p5
-    img6.src = p6
-    img7.src = p7
-    img8.src = p8
-    img9.src = p9
-    img10.src = p10
-    img11.src = p11
-    img12.src = p12
+    img1.src = "../src/p1.png"
+    img2.src = "../src/p2.png"
+    img3.src = "../src/p3.png"
+    img4.src = "../src/p4.png"
+    img5.src = "../src/p5.png"
+    img6.src = "../src/p6.png"
+    img7.src ="../src/p7.png"
+    img8.src = "../src/p8.png"
+    img9.src = "../src/p9.png"
+    img10.src = "../src/p10.png"
+    img11.src = "../src/p11.png"
+    img12.src = "../src/p12.png"
     img4.classList.add("p4")
 
     title.id = "title"
@@ -64,6 +64,10 @@ const homePage = ((p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12)=>{
         content.appendChild(imgs[i])
     }
     content.appendChild(shiro)
+    return {
+        button1,
+        button2
+    }
 });
 
 export default homePage;
