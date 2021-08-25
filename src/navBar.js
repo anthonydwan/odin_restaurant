@@ -1,5 +1,16 @@
+import homePage from "./homepage";
+import removeContent from "./index";
+
+function returnHome(){
+    removeContent();
+    window.onload = homePage();
+}
+
 const navBar = (() => {
     const content = document.querySelector("#content")
+    const body = document.querySelector("body")
+    body.classList.remove("homePageclass")
+
     const img4 = document.createElement("img")
     img4.id = "p4"
     img4.classList.add("p4Menu")
@@ -30,11 +41,17 @@ const navBar = (() => {
     button3.textContent = "Contact Us"
     div3.id = "div3"
     div3.appendChild(button3)
+
+    button1.addEventListener("click", returnHome)
     
     nav.appendChild(div1)
     nav.appendChild(div2)
     nav.appendChild(div3)
     content.appendChild(nav)
+    return {
+        button2,
+        button3
+    }
 });
 
 export default navBar;

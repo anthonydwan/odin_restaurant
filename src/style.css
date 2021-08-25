@@ -239,7 +239,7 @@ img{
     position: absolute;
     height: 45vh;
     top: 5vh;
-    width: 15vw;
+    width: 10vw;
     left: 47%;
     color:rgba(0, 0, 0, 0.082);
     opacity: 0;
@@ -252,7 +252,7 @@ img{
     position: absolute;
     top: 40px;
     width: 5vw;
-    left: 5vw;
+    left: 6vw;
     color:rgba(0, 0, 0, 0.082);
     opacity: 0;
     animation: downonly5 0.5s forwards ease 1.5s;
@@ -261,7 +261,6 @@ img{
 #homeButton{
     font-weight: 800;
     position: relative;
-    right: 0;
 }
 
 #menuButton{
@@ -271,7 +270,7 @@ img{
 
 #contactButton{
     position: relative;
-    width: 250px;
+    width: 230px;
     right: 0;
 }
 
@@ -308,14 +307,22 @@ img{
     border: 2px solid teal;
 }
 
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+
+
+
 nav{
     display: grid;
     position: absolute;
-    grid-template-columns: 40% 30% 30%;
-    margin-top: 50px;
+    grid-template-columns: repeat(3, 1fr);
     height: 70px;
-    width: 65vw;
-    min-width: 800px;
+    width: 40vw;
+    min-width: 600px;
     background-color: rgba(112, 214, 214, 0.747);
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
@@ -326,13 +333,13 @@ nav{
 
 @keyframes navStart{
     from{ opacity: 0;
-        width: 25vw;}
-    to{ width: 65vw;
+        width: 15vw;}
+    to{ width: 40vw;
         opacity: 1;}
 }
 
 nav>div>button{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 600;
     padding: 0 20px;
     margin-top: 10px;
@@ -346,16 +353,15 @@ nav>div>button{
     animation: fade 0.5s ease forwards 1s;
 }
 
-nav>div{
+/* nav>div{
     display: flex;
     flex-direction: row;
     position: relative;
-    justify-content: left;
 }
 
 #div2, #div3{
     justify-content: flex-end;
-}
+} */
 
 #menu{
     position: relative;
@@ -372,6 +378,29 @@ nav>div{
     z-index: 2;
     opacity: 0;
     animation: fade 0.5s ease forwards;
+}
+
+#contactContainer{
+    font-size: 20px;
+    position: relative;
+    top: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 20vw;
+    justify-content: space-evenly;
+    background-color: rgba(128, 128, 128, 0.664);
+    margin: 30px auto;
+    border-radius: 30px;
+    min-width: 600px;
+    z-index: 2;
+    opacity: 0;
+    animation: fade 0.5s ease forwards;
+    text-align: left;
+}
+
+.bold{
+    font-size: 30px;
 }
 
 .menuImg{

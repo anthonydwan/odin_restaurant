@@ -1,3 +1,14 @@
+import navBar from "./navBar"
+import contact from "./contact"
+
+function menuToContact(){
+    console.log("hi")
+    const menu = document.querySelector("#menu")
+    menu.innerHTML = ""
+    menu.parentNode.removeChild(menu)
+    contact();
+}
+
 const menu = () => {
     const content = document.querySelector("#content")
 
@@ -11,7 +22,7 @@ const menu = () => {
     const itemDescriptions = [
         "Using the best Coho Salmon from Miyagi Prefecture that is freshly caught and delivered to Sydney on the same morning.",
         "Fatty and rich in flavor, this cut of Miyagi Coho Salmon has an extremely tender texture. A divine creation.",
-        "We only get the most prized Bluefin Tuna from Tyoko Fish Market on the same day to ensure the fat and protein ratios are perfectly balanced and every piece have a melt-in-your mouth-type feel.",
+        "We only get the most prized Bluefin Tuna from Tokyo Fish Market on the same day to ensure the fat and protein ratios are perfectly balanced and every piece have a melt-in-your mouth-type feel.",
         "These shrimps are exclusively farmed inhouse with the utmost care and its unique sweetness has earned us as first place on Tokyo Eater's best international sushiya.",
         "We only use the largest limb of an Mizudako Octopus from Shizuoka Prefecture.",
         "Best squid in the world, period.",
@@ -54,6 +65,9 @@ const menu = () => {
     }
     
     content.appendChild(menu)
+
+    const contactButton = document.querySelector("#contactButton")
+    contactButton.addEventListener("click", menuToContact)
 }
 
 export default menu;

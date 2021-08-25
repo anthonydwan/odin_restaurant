@@ -1,7 +1,18 @@
+import menu from './menu';
+import navBar from './navBar';
+import removeContent from "./index";
+
+function loadMenuFromHome(){
+    removeContent();
+    navBar();
+    menu();
+}
+
 const homePage = (()=>{
+    const currentPage = "home"
+    const content = document.querySelector("#content")
     const body = document.querySelector("body")
     body.classList.add("homePageclass")
-    const content = document.querySelector("#content")
     const title = document.createElement("div")
     const name = document.createElement("h1")
     const shiro = document.createElement("h1")
@@ -50,7 +61,7 @@ const homePage = (()=>{
     shiro.textContent = "白寿司"
     button1.textContent = "Menu"
     button2.textContent = "Contact Us"
-    description.textContent = "Considered by many to be the most renowned sushi restaurant in the world, offering an exclusive sublime dining experience like no other."
+    description.textContent = "Considered by many to be the most renowned sushi restaurant in the world, offering a divine dining experience like no other."
     buttonDiv.id = "buttonDiv"
 
     buttonDiv.appendChild(button1)
@@ -64,10 +75,8 @@ const homePage = (()=>{
         content.appendChild(imgs[i])
     }
     content.appendChild(shiro)
-    return {
-        button1,
-        button2
-    }
+
+    button1.addEventListener('click',loadMenuFromHome)
 });
 
 export default homePage;
