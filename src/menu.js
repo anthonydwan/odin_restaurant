@@ -1,5 +1,20 @@
 import navBar from "./navBar"
 import contact from "./contact"
+import menu1 from "./menu1.png"
+import menu2 from "./menu2.png"
+import menu3 from "./menu3.png"
+import menu4 from "./menu4.png"
+import menu5 from "./menu5.png"
+import menu6 from "./menu6.png"
+import menu7 from "./menu7.png"
+import menu8 from "./menu8.png"
+import menu9 from "./menu9.png"
+import menu10 from "./menu10.png"
+import menu11 from "./menu11.png"
+import menu12 from "./menu12.png"
+
+
+const menuItems = [menu1, menu2, menu3, menu4,menu5, menu6, menu7, menu8,menu9, menu10, menu11, menu12]
 
 function menuToContact(){
     console.log("hi")
@@ -51,7 +66,7 @@ const menu = () => {
         menuImgBg.src = "../src/brush-texture.png"
         const menuImg = document.createElement("img")
         menuImg.classList.add("menuImg")
-        menuImg.src = `../src/menu${i + 1}.png`
+        menuImg.src = menuItems[i]
         itemImg.appendChild(menuImgBg)
         itemImg.appendChild(menuImg)
     

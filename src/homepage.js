@@ -2,6 +2,18 @@ import menu from './menu';
 import navBar from './navBar';
 import contact from './contact'
 import removeContent from "./index";
+import p1 from "./p1.png";
+import p2 from "./p2.png";
+import p3 from "./p3.png";
+import p4 from "./p4.png";
+import p5 from "./p5.png";
+import p6 from "./p6.png";
+import p7 from "./p7.png";
+import p8 from "./p8.png";
+import p9 from "./p9.png";
+import p10 from "./p10.png";
+import p11 from "./p11.png";
+import p12 from "./p12.png";
 
 function loadMenuFromHome(){
     removeContent();
@@ -41,23 +53,24 @@ const homePage = (()=>{
     const img12 = document.createElement("img")
 
     const imgs = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12]
+    const picsc = [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12]
 
     for (let i = 0; i < imgs.length; i++){
         imgs[i].id = `p${i+1}`
     }
 
-    img1.src = "../src/p1.png"
-    img2.src = "../src/p2.png"
-    img3.src = "../src/p3.png"
-    img4.src = "../src/p4.png"
-    img5.src = "../src/p5.png"
-    img6.src = "../src/p6.png"
-    img7.src ="../src/p7.png"
-    img8.src = "../src/p8.png"
-    img9.src = "../src/p9.png"
-    img10.src = "../src/p10.png"
-    img11.src = "../src/p11.png"
-    img12.src = "../src/p12.png"
+    img1.src = p1
+    img2.src = p2
+    img3.src = p3
+    img4.src = p4
+    img5.src = p5
+    img6.src = p6
+    img7.src = p7
+    img8.src = p8
+    img9.src = p9
+    img10.src = p10
+    img11.src = p11
+    img12.src = p12
     img4.classList.add("p4")
 
     title.id = "title"
