@@ -11,6 +11,15 @@ html, body{
     text-align: center;
 }
 
+ body::-webkit-scrollbar{
+    display:none;
+}
+
+body {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
 .homePageclass{
         overflow: hidden;
 }
@@ -111,7 +120,6 @@ img{
     animation: leftdown 1s forwards ease;
 }
 
-
 #p3{
     position: absolute;
     width: 12vw;
@@ -139,8 +147,6 @@ img{
     opacity: 0;
     animation: fade 1s forwards ease;
 }
-
-
 
 #p5{
     position: absolute;
@@ -290,6 +296,7 @@ img{
 
 #buttonDiv>button{
     font-size: 20px;
+
     height: 50px;
     width: 160px;
     border-radius: 30px;
@@ -308,15 +315,12 @@ img{
 }
 
 #map {
-    height: 400px;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
-  }
-
-
+    width: 30vw;
+    min-width: 500px;
+}
 
 nav{
+    top: 100px;
     display: grid;
     position: absolute;
     grid-template-columns: repeat(3, 1fr);
@@ -353,25 +357,16 @@ nav>div>button{
     animation: fade 0.5s ease forwards 1s;
 }
 
-/* nav>div{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-
-#div2, #div3{
-    justify-content: flex-end;
-} */
-
 #menu{
     position: relative;
     top: 180px;
+    bottom: 180px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     width: 65vw;
     justify-content: space-evenly;
-    background-color: rgba(128, 128, 128, 0.664);
+    background-color: rgba(192, 192, 192, 0.315);
     margin: 30px auto;
     border-radius: 30px;
     min-width: 600px;
@@ -387,9 +382,9 @@ nav>div>button{
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    width: 20vw;
+    width: 40vw;
     justify-content: space-evenly;
-    background-color: rgba(128, 128, 128, 0.664);
+    background-color: rgba(192, 192, 192,  0.315);
     margin: 30px auto;
     border-radius: 30px;
     min-width: 600px;
@@ -447,4 +442,60 @@ nav>div>button{
     grid-template-columns: 350px 300px;
     grid-template-rows: 350px;
     margin: 20px 0px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+
+.attribution{
+    position: fixed;
+    bottom: 60px;
+    right: 80px;
+    z-index: 3;
+}
+
+.inner>h1{
+    font-size: 35px;
+    line-height: 1;
+}
+
+.inner{
+    text-align: left;
+    background: rgba(112, 214, 214, 0.705);
+    padding: 2em;
+    border-radius: 10px;
+    width: 300px;
+    clip-path: circle(10% at 85% 85%);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.inner:hover{
+    clip-path: circle(75%);
+    background: rgb(231, 149, 218);
+}
+
+.inner:hover span{
+    opacity: 0;
+}
+
+span{
+    float: right;
+    bottom: 24px;
+    right: 7px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: all .5s;
+    position: relative;
+    margin-right: 4%;
+}
+
+
+.inner>h1{
+    color: white;
 }

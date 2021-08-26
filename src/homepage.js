@@ -1,5 +1,6 @@
 import menu from './menu';
 import navBar from './navBar';
+import contact from './contact'
 import removeContent from "./index";
 
 function loadMenuFromHome(){
@@ -8,8 +9,14 @@ function loadMenuFromHome(){
     menu();
 }
 
+function loadContactFromHome(){
+    removeContent();
+    navBar();
+    contact();
+}
+
+
 const homePage = (()=>{
-    const currentPage = "home"
     const content = document.querySelector("#content")
     const body = document.querySelector("body")
     body.classList.add("homePageclass")
@@ -77,6 +84,7 @@ const homePage = (()=>{
     content.appendChild(shiro)
 
     button1.addEventListener('click',loadMenuFromHome)
+    button2.addEventListener('click',loadContactFromHome)
 });
 
 export default homePage;

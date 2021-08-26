@@ -4,8 +4,8 @@ import contact from "./contact"
 function menuToContact(){
     console.log("hi")
     const menu = document.querySelector("#menu")
-    menu.innerHTML = ""
     menu.parentNode.removeChild(menu)
+    this.removeEventListener('click',menuToContact)
     contact();
 }
 
