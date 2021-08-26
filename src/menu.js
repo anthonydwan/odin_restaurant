@@ -9,6 +9,10 @@ function menuToContact(){
     contact();
 }
 
+const createFoodItem = (itemName, itemDescription, ImgSrc) => {
+    return {itemName, itemDescription, ImgSrc}
+}
+
 const menu = () => {
     const content = document.querySelector("#content")
 
