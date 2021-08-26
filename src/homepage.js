@@ -14,6 +14,7 @@ import p9 from "./p9.png";
 import p10 from "./p10.png";
 import p11 from "./p11.png";
 import p12 from "./p12.png";
+import gitlink from "./github.png"
 
 function loadMenuFromHome(){
     removeContent();
@@ -29,6 +30,8 @@ function loadContactFromHome(){
 
 
 const homePage = (()=>{
+    const git = document.querySelector("#git")
+    git.src = gitlink;
     const content = document.querySelector("#content")
     const body = document.querySelector("body")
     body.classList.add("homePageclass")
