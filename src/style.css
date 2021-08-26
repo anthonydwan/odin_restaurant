@@ -453,8 +453,8 @@ a{
 
 .attribution{
     position: fixed;
-    bottom: 60px;
-    right: 80px;
+    bottom: 30px;
+    right: 120px;
     z-index: 3;
 }
 
@@ -498,4 +498,24 @@ span{
 
 .inner>h1{
     color: white;
+}
+
+.githublink{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    height: 60px;
+    width: 60px;
+    z-index: 3;
+}
+
+.githublink>img{
+    height: 60px;
+    width: 60px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.githublink img:hover{
+    transform: rotate(360deg);
 }
