@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/anthonydwan/odin_restaurant#readme",
   "devDependencies": {
-    "webpack": "^5.51.1",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
